@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hector Arana</title>
+    <link rel="stylesheet" href="styleport.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="progresscircle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+   
+</head>
+
+<body>
+    <div class="wrapper">
+        <span>1</span>
+        <span>0</span>
+        <span>1</span>
+        <span>0</span>
+        <span>1</span>
+        <span>0</span>
+        <span>1</span>
+        <span>0</span>
+        <span>1</span>
+        <span>0</span>
+    </div>
+    <!------>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-eduardo">
+                <span class="image"></span>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <a href="#hom" class="logito">
+                        <i class='bx bxs-chevron-left' style="color: rgb(253, 253, 253);">Hec.dev/</i>
+                        <i class='bx bxs-chevron-right' style="color: rgb(255, 255, 255);"></i>
+                    </a>
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#hom">
+                            <i class='bx bx-home icon'></i>
+                            <span class="eduardo nav-eduardo">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#about">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="eduardo nav-eduardo">About me</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#services">
+                            <i class='bx bx-briefcase icon'></i>
+                            <span class="eduardo nav-eduardo">My services</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#skill">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="eduardo nav-eduardo">Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#portfolio">
+                            <i class='bx bx-folder icon'></i>
+                            <span class="eduardo nav-eduardo">Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#contact">
+                            <i class='bx bxs-contact icon'></i>
+                            <span class="eduardo nav-eduardo">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-eduardo eduardo">Light mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggle = document.querySelector('.toggle');
+
+        sidebar.addEventListener('mouseover', () => {
+            sidebar.classList.remove('close');
+        });
+
+        sidebar.addEventListener('mouseout', (event) => {
+            if (!event.relatedTarget || !sidebar.contains(event.relatedTarget)) {
+                sidebar.classList.add('close');
+            }
+        });
+
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('close');
+        });
+
+        const body = document.querySelector('body');
+        const searchBtn = document.querySelector('.search-box');
+        const modeSwitch = document.querySelector('.toggle-switch');
+        const modeeduardo = document.querySelector('.mode-eduardo');
+
+        searchBtn.addEventListener('click', () => {
+            sidebar.classList.remove('close');
+        });
+
+        modeSwitch.addEventListener('click', () => {
+            body.classList.toggle('dark');
+
+            if (body.classList.contains('dark')) {
+                modeeduardo.innerText = 'Light mode';
+            } else {
+
+                modeeduardo.innerText = 'Dark mode';
+
+            }
+        });
+    </script>
+    <section id="hom" class="home">
+        <div class="home-content">
+            <h3> Hello, I am</h3>
+            <h3> Hector Eduardo Arana</h3>
+            <h3> And I'm a <span class="text"></span></h3>
+            <p>
+                I am Engineer Systems and Full Stack Developer
+            </p>
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/hector-eduardo-arana-guerra-168b7726a"  target="_blank" style="--i:7"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://t.me/HectorArana"  target="_blank" style="--i:8"><i class='bx bxl-telegram'></i></a>
+                <a href="https://api.whatsapp.com/send?phone=50244453212"  target="_blank" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
+
+            </div>
+            <div class="button">
+                <div class="content">
+                    <i class="bx bx-cloud-download"></i>
+                    <a href="#" class="button-text">Download CV</a>
+                </div>
+            </div>
+            <script>
+                const button = document.querySelector(".button");
+                const downloadLink = "/curriculum.pdf";
+
+                button.addEventListener("click", () => {
+                    button.classList.add("active");
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                        button.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle");
+                        button.querySelector(".button-text").innerText = "Completed";
+
+                        setTimeout(() => {
+                            window.open(downloadLink, "_blank");
+                        }, 1000);
+                    }, 3599);
+                });
+            </script>
+        </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/portafolio/IMAGES/mifoto.png" style="color:rgb(0, 0, 0)"; ="200px">
+
+        </div>
+
+        <div class="about-text">
+            <h2 style="color: aliceblue;">About<span>Me</span></h2>
+            <h4>Engineer in Systems|Full Stack Developer</h4>
+            <div id="typed-text-container">
+                <p id="custom-text"></p>
+              </div>
+            </div>
+    </section>
+    <section class="animated-section">
+
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-tittle">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class='bx bx-code' style='color:#63226d'></i>
+                        <h1>UI/UX design</h1>
+                        <p>
+                            I have a passion for creating visually captivating and user-friendly interfaces that elevate
+                            the overall user experience. Through meticulous attention to detail and an understanding of
+                            user psychology, I strive to deliver designs that engage and delight users.</p>
+                    </div>
+                    <div>
+                        <i class='bx bx-crop' style='color:#63226d'></i>
+                        <h1 style="font-size: 24px;">Web Development</h1>
+                        <p>
+
+                            specialize in creating responsive and dynamic websites using HTML, CSS, and JavaScript.
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bxl-php' style='color:#cf62f3'></i>
+                        <h1>PHP Development</h1>
+                        <p>
+
+                            have experience in building web applications with PHP and integrating them with databases.
+
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bxl-microsoft-teams' style='color:#cf62f3'></i>
+                        <h1>Custom Software Development</h1>
+                        <p>
+
+                            In-depth knowledge of computer systems.
+                            Creative problem-solving abilities.
+                            Strong research methodology skills.
+                            Effective information analysis and synthesis.
+                            Collaborative and team-oriented mindset.
+
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bxl-java' style='color:#cf62f3'></i>
+                        <h1>Java Development and Database Management</h1>
+                        <p>
+
+                            have hands-on experience in developing Java applications,design and optimize MySQL
+                            databases, ensuring efficient data storage and retrieval for applications.
+
+                        </p>
+                    </div>
+                    <div>
+                        <i class='bx bx-git-branch' style='color:#cf62f3'></i>
+                        <h1> IT Consulting and Project Leadership</h1>
+                        <p>
+                            Math proficiency & technical diagram comprehension
+                            Logical thinking & problem-solving in technology
+                            Expert in mathematical model solutions
+                            Fluent in technical jargon
+                            Innovative system planning & design
+                            Strong organizational & project management skills
+                            Knowledge of IT legal & security regulations
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <h1 class="sub-tittle" style="color: blueviolet;">My <span>Skills</span></h1>
+
+    <section class="animated-section">
+        <div id="skill" class="skills">
+            <div class="container2">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-heading text-center">
+                            <h2></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="100 ">html</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="89">css</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="45">java</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="70">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="80">PHP</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="80">MySQL</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="85">VSCODE</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="85">Postman</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="circlechart" data-percentage="70 ">CloudService</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section  id="ed";  class="animated-section" style="margin-top: 200px;">
+        <div id="portfolio" class="portfolio"></div>
+        <h1 class="sub-tittle" style="color: blueviolet;">Latest <span>Projects</span></h1>
+        <div class="edd">
+          <i id="left" class="bx bx-chevron-left"></i>
+          <div class="carousel">
+            <div class="card row">
+              <img src="/portafolio/IMAGES/1.png" alt="Project 1">
+              <div class="layer">
+                <h5>Entrepreneurship Center Platform</h5>
+                <p>It is a platform for entrepreneurs/partners with a login and interactive two-view page.</p>
+                <a href="https://proyectodesarrollosql.com" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card row">
+              <img src="/portafolio/IMAGES/2.png" alt="Project 2">
+              <div class="layer">
+                <h5>File Manager</h5>
+                <p>The previous page integrates various functionalities that can be tested, such as this file manager where you can share files with other users, similar to a social network.</p>
+                <a href="https://proyectodesarrollosql.com" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card row">
+              <img src="/portafolio/IMAGES/3.png" alt="Project 3">
+              <div class="layer">
+                <h5>Real-time chat</h5>
+                <p>Additionally, it also integrates a real-time chat where you can communicate with registered users.</p>
+                <a href="https://proyectodesarrollosql.com" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card row">
+              <img src="/portafolio/IMAGES/java.png" alt="Project 4">
+              <div class="layer">
+                <h5>java adaptative App</h5>
+                <p>Adaptive application for small businesses, in this case, for a beauty salon, but it can be customized. It includes product registration, sales management, and more.</p>
+                <a href="https://github.com/Hector-Eduardo-Arana/proyecto.git" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card row">
+              <img src="/portafolio/IMAGES/salon.png" alt="Project 5">
+              <div class="layer">
+                <h5>Admin Page for Beauty Salon Demo</h5>
+                <p>An Application for Service Registration, Payment Processing, Sales Tracking, Appointment Management, Designed to be User-Friendly.</p>
+                <a href="https://divinasalon.000webhostapp.com" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card row">
+              <img src="/portafolio/IMAGES/9.png" alt="Project 6">
+              <div class="layer">
+                <h5>Demo Gym Admin Page</h5>
+                <p>This is a demo of a page designed for managing a gym. It can be customized to suit other businesses and industries. Please note that this demo.</p>
+                <a href="https://proyectodesarrollosql.com/gym-Demo/" class="button12" target="_blank" style="text-decoration: none;">
+                    <i class="bx bx-link custom-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <i id="right" class="bx bx-chevron-right"></i>
+        </div>
+    </div>
+      </section>
+      
+  
+    <section class="animated-section">
+        <div class="wrapper2">
+            <div class="center-line">
+                <a href="#" class="scroll-icon"><i class='bx bxs-briefcase'></i></a>
+            </div>
+            <div class="row row-1">
+                <section>
+                    <i class='icon bx bxs-graduation'></i>
+                    <div class="details">
+                        <span class="title">completed the curriculum</span>
+                        <span>29th Nov 2022</span>
+                    </div>
+                    <p>I have successfully completed the curriculum for a Systems Engineering degree at Universidad
+                        Mariano Gálvez in Guatemala.</p>
+                    <div class="bottom">
+
+                    </div>
+                </section>
+            </div>
+            <div class="row row-2">
+                <section>
+                    <i class='icon bx bxs-star'></i>
+                    <div class="details">
+                        <span class="title">Scrum Foundation Professional Certificate (SFPC)</span>
+                        <span>19th Mar 2023</span>
+                    </div>
+                    <p></p>
+                    <div class="bottom">
+                        <a href="portafolio/Certificate.pdf">Read more</a>
+
+                    </div>
+
+                    <div class="bottom">
+
+                    </div>
+                </section>
+            </div>
+            <div class="row row-1">
+                <section>
+                    <i class='icon bx bxs-certification'></i>
+                    <div class="details">
+                        <span class="title">I am currently pursuing a Master's degree in Cybersecurity.</span>
+                        <span>3rd Jan 2023</span>
+                    </div>
+                    <p>
+                        I am expanding my knowledge and skills in the field of cybersecurity to stay up-to-date with the
+                        latest trends and practices in data protection, risk mitigation, and cybersecurity solutions.
+                    </p>
+                    <div class="bottom">
+
+                    </div>
+                </section>
+            </div>
+            <div class="row row-2">
+                <section>
+                    <i class='icon bx bx-certification'></i>
+                    <div class="details">
+                        <span class="title">I am currently pursuing a Master's degree in Programming.</span>
+                        <span>8th Jan 2023</span>
+                    </div>
+                    <p>focusing on areas where I have less knowledge, in order to further expand my studies and
+                        opportunities.</p>
+                    <div class="bottom">
+                    </div>
+                </section>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <form action="https://formspree.io/f/myyqglaj" method="POST">
+            <h2 style="color: #ffffff;">Contacto</h2>
+            <div class="imput-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="name">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email" placeholder="email">
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+                <input class="btn" type="submit" value="Enviar">
+            </div>
+
+        </form>
+        <div class="container4">
+            <h2 class="object" data-value="3"><br><span></span></h2>
+            <img src="/portafolio/IMAGES/111.png" class="object" data-value="-2" alt="">
+
+
+
+        </div>
+
+        <script type="text/javascript">
+            document.addEventListener("mousemove", parallax);
+            function parallax(e) {
+                document.querySelectorAll(".object").forEach(function (move) {
+
+                    var moving_value = move.getAttribute("data-value");
+                    var x = (e.clientX * moving_value) / 250;
+                    var y = (e.clientY * moving_value) / 250;
+
+                    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+                });
+            }
+        </script>
+
+    </section>
+    <script src="main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="progresscircle.js"></script>
+    <script>
+        $('.circlechart').circlechart();
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</body>
+
+</html>
